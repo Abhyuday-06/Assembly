@@ -1,0 +1,7 @@
+ORG 000H
+MOV A, #36H
+MOV B, #09H
+DIV AB
+MOV 30H, A 
+END
+  
