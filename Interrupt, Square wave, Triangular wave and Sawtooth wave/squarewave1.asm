@@ -1,0 +1,15 @@
+; Square wave 
+
+ORG 0000H
+AGAIN: MOV A, #00H
+	   MOV P1, A
+	   ACALL DELAY
+	   MOV A, #0FFH
+	   MOV P1, A
+	   ACALL DELAY
+	   SJMP AGAIN
+
+DELAY: MOV R2, #50
+HERE:  DJNZ R2, HERE
+	   RET
+	   END
